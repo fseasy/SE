@@ -1,3 +1,7 @@
+<?php
+	include('ZC.php') ;
+	$zc = new ZC() ;
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,11 +9,11 @@
 	<title>选择</title>
 	<style>
 		body{
-			font-size:2em ;
+			font-size:1.2em ;
 			height:100% ;
 		}
 		.center_panel{
-			width:60% ;
+			width:80% ;
 			height:50% ;
 			margin:0 auto ;
 			border-radius:0.2em ;
@@ -44,9 +48,11 @@
 	<div class="center_panel">
 		<div class="title">查询选项</div>
 		<div class="content">
+			<div class="line" id="random"><a>随机一个幸运教室</a></div>
 			<div class="line" id="current"><a>查看今日教室情况</a></div>
 			<div class="line" id="fixed"><a>查看指定日期教室情况</a></div>
 		</div>
+		
 	</div>
 	<script>
 		var screenHeight = window.screen.height ;
@@ -54,10 +60,7 @@
 		var centerPanel = getClass('center_panel') ;
 		var c_height = centerPanel[0].offsetHeight ;
 		var marginTopV = (screenHeight-c_height)/2 ;
-		if(marginTopV < 150){
-			marginTopV = 150 ;
-		}
-		centerPanel[0].style.marginTop = marginTopV+"px" ;
+		//centerPanel[0].style.marginTop = marginTopV+"px" ;
 		var lines = getClass('line') ;
 		//make the click effect
 		for(var i = 0 ; i < lines.length ; i++){
@@ -69,12 +72,21 @@
 			}
 		}
 		//get the avalible zc 
-		var zc = 11 ;
-		var xq = "一校区" ;
+		var zc,xq,day ;
 		//process the click 
 		var current = document.getElementById('current') ;
 		current.onclick = function(){
-			window.location.href="getclassroom.php?zc="+zc+"&xq="+xq ;
+			zc = 11 ;
+			xq = "一校区" ;
+			day = 2 ;
+			window.location.href="getclassroom.php?zc="+zc+"&xq="+xq+"&day="+day ;
+		}
+		var random = document.getElementById('random') ;
+		random.onclick = function(){
+			zc = 11 ;
+			xq = "一校区" ;
+			day = 6 ;
+			window.location.href="getclassroom.php?zc="+zc+"&xq="+xq+"&day="+day+"&random=random" ;
 		}
 		function getClass(className){
 			var results = new Array() ;

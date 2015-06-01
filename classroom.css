@@ -1,0 +1,124 @@
+*{
+	margin:0 ;
+	padding:0 ;
+}
+body{
+	padding-top:2em ;
+}
+.clear{
+	clear:both ;
+}
+.tit_line{
+	background:#ddd ;
+	height:4em ;
+	line-height:4em ;
+	text-align:center ;
+	font-weight:bold ;
+	font-size:0.6em ;
+	position:fixed ;
+	top:0 ;
+	left:0 ;
+	width:98% ;
+	border:0.2em solid #2fabdc;
+}
+.tit_line .room{
+	width:16% ;
+	float:left ;
+}
+.tit_line .time{
+	width:16% ;
+	float:left ;
+	border-left:0.1em solid #888;
+	padding-right:0.1em ;
+}
+.group{
+	margin-top:1em ;
+}
+.group .g_title{
+	color:#2fabdc ;
+	font-weight:bold ;
+	cursor:pointer;
+}
+.group .g_content{
+	margin-top:0.5em ;
+	display:none ;
+}
+.line{
+	margin:0.3em 0.1em ;
+	font-size:0.6em ;
+	text-align:center ;
+	overflow:hidden ;
+	width:100% ;
+	height:4em ;
+	line-height:4em ;
+	background:#fafafa ;
+}
+.line .room{
+	width:16% ;
+	float:left ;
+	border:1px solid #f00 ;
+}
+.line .state_container{
+	width:16% ;
+	height:100% ;
+	float:left ;
+}
+.state_container .state{
+	height:3em ;
+	width:3em ;
+	margin:auto auto ;
+}
+.state_container .state img{
+	width:100% ;
+	height:100% ;
+}
+.random_back{
+	position:relative ;
+}
+.random_panel{
+	position:absolute ;
+	top:3em ;
+	right:2em ;
+	width:50% ;
+	height:250px ;
+	background:#ddd ;
+	opacity:0.8 ;
+	border-radius:5px ;
+}
+.random_classroom{
+	font-weight:bold ;
+	font-size:2em ;
+	height:50px ;
+	line-height:50px ;
+	background:#f0f0f0 ;
+	opacity:0.6 ;
+	border-radius:5px ;
+	text-align:center ;
+}
+.random_classroom_info{
+	width:100% ;
+	height:200px ;
+}
+.random_panel .textblock{
+	font-size:20px ;
+	width:33% ;
+	height:50% ;
+	float:left ;
+	line-height:50px;
+}
+.random_panel .block{
+	width:33% ;
+	height:50% ;
+	float:left ;
+}
+.block .time{
+	height:48% ;
+	border-bottom:0.3em dashed #ccc ;
+}
+.block .state_container{
+	height:50px ;
+}
+.block .state_container .state{
+	width:50px ;
+	margin:auto auto ;
+}
